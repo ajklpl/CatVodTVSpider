@@ -59,20 +59,20 @@ public class Hdmoli1 extends XPathFilter{
                                             int start = player1.indexOf("https");
                                             int end = player1.lastIndexOf('|');
                                             String url2 = player1.substring(start, end);
-                                            url2 = url2 + "&type=json";
-                                            Document doc2 = Jsoup.parse(OkHttpUtil.string(url2, getHeaders(url)));
+                                            String url3 = url2 + "&type=json";
+                                            Document doc2 = Jsoup.parse(OkHttpUtil.string(url3, getHeaders(url)));
                                             String doc3 = doc2.html().trim();
                                             int start2 = doc3.indexOf("http");
-                                            int end2 = doc3.lastIndexOf("tg") + 1;
+                                            int end2 = doc3.lastIndexOf("tg") + 2;
                                             String json2 = doc3.substring(start2, end2);
                                             player = json2;
                                         }else {
                                             String url2 = player1;
-                                            url2 = url2 + "&type=json";
-                                            Document doc2 = Jsoup.parse(OkHttpUtil.string(url2, getHeaders(url)));
+                                            String url3 = url2 + "&type=json";
+                                            Document doc2 = Jsoup.parse(OkHttpUtil.string(url3, getHeaders(url)));
                                             String doc3 = doc2.html().trim();
                                             int start2 = doc3.indexOf("http");
-                                            int end2 = doc3.lastIndexOf("tg") + 1;
+                                            int end2 = doc3.lastIndexOf("tg") + 2;
                                             String json2 = doc3.substring(start2, end2);
                                             player = json2;
 
