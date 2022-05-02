@@ -65,7 +65,9 @@ public class Hdmoli1 extends XPathFilter{
                                             int start2 = doc3.indexOf("http");
                                             int end2 = doc3.lastIndexOf("tg") + 2;
                                             String json2 = doc3.substring(start2, end2);
-                                            player = json2;
+                                            String json3 = json2;
+                                            player = json3;
+                                           
                                         }else {
                                             String url2 = player1;
                                             String url3 = url2 + "&type=json";
@@ -74,8 +76,8 @@ public class Hdmoli1 extends XPathFilter{
                                             int start2 = doc3.indexOf("http");
                                             int end2 = doc3.lastIndexOf("tg") + 2;
                                             String json2 = doc3.substring(start2, end2);
-                                            player = json2;
-
+                                            String json3 = json2;
+                                            player = json3;
                                         }
                                     }
                                     if  (variable.contains("mp4")) {
@@ -102,7 +104,7 @@ public class Hdmoli1 extends XPathFilter{
                     }
                     String videoUrl = player;
                     result.put("parse", 0);
-                    result.put("playUrl", player);
+                    //result.put("playUrl", player);
                     result.put("subf", "/vvt");
                     result.put("subt", zimu);
                     result.put("url", videoUrl);
