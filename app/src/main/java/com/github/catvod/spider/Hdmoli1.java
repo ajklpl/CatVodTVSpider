@@ -21,8 +21,8 @@ public class Hdmoli1 extends XPathFilter{
     public String playerContent(String flag, String id, List<String> vipFlags) {
         try {
                 JSONObject headers = new JSONObject();
-                headers.put("Host", " parse.hdmoli.net:18226");
-                headers.put("origin", " https://www.hdmoli.com");
+                //headers.put("Host", " parse.hdmoli.net:18226");
+                //headers.put("origin", " https://www.hdmoli.com");
                 // headers.put("Accept", " */*");
                 //  headers.put("User-Agent", " Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36");
 
