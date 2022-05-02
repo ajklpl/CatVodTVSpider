@@ -62,7 +62,7 @@ public class Hdmoli1 extends XPathFilter{
                                             url2 = url2 + "&type=json";
                                             Document doc2 = Jsoup.parse(OkHttpUtil.string(url2, getHeaders(url)));
                                             String doc3 = doc2.html().trim();
-                                            int start2 = doc3.indexOf("https");
+                                            int start2 = doc3.indexOf("http");
                                             int end2 = doc3.lastIndexOf("tg") + 1;
                                             String json2 = doc3.substring(start2, end2);
                                             player = json2;
@@ -71,8 +71,8 @@ public class Hdmoli1 extends XPathFilter{
                                             url2 = url2 + "&type=json";
                                             Document doc2 = Jsoup.parse(OkHttpUtil.string(url2, getHeaders(url)));
                                             String doc3 = doc2.html().trim();
-                                            int start2 = doc3.indexOf("https");
-                                            int end2 = doc3.lastIndexOf("tg") + 3;
+                                            int start2 = doc3.indexOf("http");
+                                            int end2 = doc3.lastIndexOf("tg") + 1;
                                             String json2 = doc3.substring(start2, end2);
                                             player = json2;
 
@@ -102,7 +102,7 @@ public class Hdmoli1 extends XPathFilter{
                     }
                     String videoUrl = player;
                     result.put("parse", 0);
-                    //result.put("playUrl", player);
+                    result.put("playUrl", player);
                     result.put("subf", "/vvt");
                     result.put("subt", zimu);
                     result.put("url", videoUrl);
